@@ -21,5 +21,13 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
+  ],
+  "main": "server/index.js",
+"proxy": "http://localhost:5040",
+"nodemonConfig": {
+  "ignore": [
+    "src/*",
+    "public/*"
   ]
+}
 }
