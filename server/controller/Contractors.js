@@ -1,5 +1,5 @@
 let id = 1
-let contractors = [{
+let contractors = [ {
     id: id++,
     name: 'Jonathan',
     company: 'Canasian',
@@ -34,7 +34,7 @@ let contractors = [{
 }
 ]
 
-modules.exports = {
+module.exports = {
     get: (req, res) => {
         res.send(contractors)
     },
@@ -42,7 +42,7 @@ modules.exports = {
         let newContractor = req.body 
       newContractor.id = id++
       
-      contractors.push(contractor)
+      contractors.push(newContractor)
       res.send(contractors)
     }
 }
