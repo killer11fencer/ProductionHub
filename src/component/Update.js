@@ -13,7 +13,7 @@ class Update extends Component {
             phone: props.contact.phone,
             email: props.contact.email,
             city: props.contact.city,
-            id: this.props.id
+            id: props.contact.id
         }
     }
     handleChange = (e) => {
@@ -25,10 +25,10 @@ class Update extends Component {
             this.setState({[name]: value.split(',')})
         }
         handleClick = () => {
-            let updatedContact = this.state;
+            let updatedContact = {...this.state};
             this.props.update(updatedContact)
         }
-        render() {
+        render() { console.log(this.state)
             return (
                 <div>
                     <h4>Basic Info</h4>

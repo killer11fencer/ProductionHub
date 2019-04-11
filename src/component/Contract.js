@@ -21,6 +21,7 @@ class Contract extends Component {
         Axios.post('/api/contractor', newContact).then(res => {
             this.setState({ contractArray: res.data })
         }).catch((err) => { console.log('err', err) })
+        
     }
     deleteUser = (id) => {
         Axios.delete(`/api/contractor/${id}`).then(res => {
@@ -31,34 +32,45 @@ class Contract extends Component {
         Axios.put(`/api/contractor/${updatedContact.id}`, updatedContact).then(res => {
             this.setState({ contractArray: res.data })
         }).catch((err) => { console.log('err', err) })
+       
     }
 
     render() {
-        let contact = this.state
+        console.log(this.state)
+       
         let displayArray = this.state.contractArray.map((elem, index) => {
-            return <div key={index}>
+            return <div className='Contact' key={index}>
+                <div className="info">
                 <h2>Name: {elem.name}</h2>
                 <h3>Company: {elem.company}</h3>
                 <h4>Experience: {elem.experience}</h4>
-                <h4>Special Skills: {elem.skills + ' , '}</h4>
+                <h4>Special Skills: { elem.skills + ' , '}</h4>
                 <h4>Rate:{elem.rate}</h4>
-                <button onClick={() => this.deleteUser(elem.id)}>Delete</button>
-                <Popup trigger={<button>Edit</button>} position="right center">
-                    <div><Update contact={contact} update={this.updateContact} /></div>
+                </div>
+                <div className="navbutton">
+                <button className='delete' onClick={() => this.deleteUser(elem.id)}>Delete</button>
+                <Popup trigger={<button className='edits'>Edit</button>} position="right center">
+                    <div><Update contact={elem} index={index} update={this.updateContact} /></div>
                 </Popup>
-                <Popup trigger={<button>Contact</button>} position="right center">
+                <Popup trigger={<button className='contact info'>Contact</button>} position="right center">
                     <div><h3>Email:</h3>{elem.email}
-                        <h3>Phone:</h3>Phone:{elem.phone}
-                        <h3>City:</h3>City:{elem.city}
+                        <h3>Phone:</h3>{elem.phone}
+                        <h3>City:</h3>{elem.city}
                     </div>
                 </Popup>
+                </div>
             </div>
         })
 
         return (
             <div>
                 {displayArray}
-                <Create addNew={this.addNew} />
+                <Popup trigger={<button className="newContact">New Contact</button>} position='right center'>
+                <div>
+                <h3>New Contact</h3>
+                <Create addNew={this.addNew}/>
+                </div>
+                </Popup>
             </div>
         )
 
