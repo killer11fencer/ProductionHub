@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Create from './Create'
+import Popup from 'reactjs-popup'
 import Axios from 'axios';
 
 class Contract extends Component {
@@ -35,6 +36,9 @@ class Contract extends Component {
             <h4>{elem.skills + ' , '}</h4>
             <h4>{elem.rate}</h4>
             <button onClick={() => this.deleteUser(elem.id)}>Delete</button>
+            <Popup trigger={<button>Edit</button>} position="right center">
+            <div>Popup content here !!</div>
+             </Popup>
             </div>})
         
             return (
