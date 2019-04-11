@@ -20,6 +20,11 @@ class Contract extends Component {
             this.setState({contractArray: res.data})
         }).catch((err)=>{console.log('err',err)})
     }
+        deleteUser = (id) => {
+            Axios.delete(`/api/contractor/${id}`).then( res => {
+                this.setState({contractArray: res.data})
+            }).catch((err)=>{console.log('err',err)})
+        }
 
     render() {
         let displayArray = this.state.contractArray.map((elem,index)=> 
@@ -29,6 +34,7 @@ class Contract extends Component {
             <h4>{elem.experience}</h4>
             <h4>{elem.skills + ' , '}</h4>
             <h4>{elem.rate}</h4>
+            <button onClick={() => this.deleteUser(elem.id)}>Delete</button>
             </div>})
         
             return (
