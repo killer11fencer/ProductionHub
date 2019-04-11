@@ -20,7 +20,7 @@ let contractors = [ {
     skills: ['DP', 'Animator', 'Director'],
     rate: '$500 a day',
     phone: '804-345-4123',
-    email: 'canasian@gmail.com',
+    email: 'gggggcanasian@gmail.com',
     city: 'Springville'
 },
 {
