@@ -47,5 +47,12 @@ module.exports = {
       
       contractors.push(newContractor)
       res.send(contractors)
+    },
+    delete: (req,res) => {
+        let {id} = req.params
+        let index = contractors.findIndex(c=>+c.id === +id) 
+            contractors.splice(index,1)
+        
+        res.send(contractors)
     }
 }
