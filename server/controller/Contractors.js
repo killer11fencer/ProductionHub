@@ -54,5 +54,14 @@ module.exports = {
             contractors.splice(index,1)
         
         res.send(contractors)
+    },
+    update: (req,res) => {
+        let {id} = req.params
+        let updatedContact = req.body
+        updatedContact.id = +id
+        let index = contractors.findIndex(c=>+c.id === +id)
+        contractors.splice(index,1,updatedContact)
+        res.send(contractors)
+
     }
 }

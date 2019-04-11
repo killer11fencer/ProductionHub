@@ -8,6 +8,7 @@ const ContractCtrl = require('./controller/Contractors')
 app.get('/api/contractor',ContractCtrl.get)
 app.post('/api/contractor',ContractCtrl.create)
 app.delete('/api/contractor/:id',ContractCtrl.delete)
+app.put('/api/contractor/:id',ContractCtrl.update)
 
 
 app.listen(port, ()=> {console.log('Listening on port',port)})
