@@ -6,10 +6,11 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Contract/>
+      <div className='body'>
         
-      </div>
+        <Contract/>
+        </div>
+    
       
     );
   }

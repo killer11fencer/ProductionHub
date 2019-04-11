@@ -21,7 +21,7 @@ class Contract extends Component {
         Axios.post('/api/contractor', newContact).then(res => {
             this.setState({ contractArray: res.data })
         }).catch((err) => { console.log('err', err) })
-        
+
     }
     deleteUser = (id) => {
         Axios.delete(`/api/contractor/${id}`).then(res => {
@@ -32,44 +32,52 @@ class Contract extends Component {
         Axios.put(`/api/contractor/${updatedContact.id}`, updatedContact).then(res => {
             this.setState({ contractArray: res.data })
         }).catch((err) => { console.log('err', err) })
-       
+
     }
 
     render() {
         console.log(this.state)
-       
+
         let displayArray = this.state.contractArray.map((elem, index) => {
             return <div className='Contact' key={index}>
                 <div className="info">
-                <h2>Name: {elem.name}</h2>
-                <h3>Company: {elem.company}</h3>
-                <h4>Experience: {elem.experience}</h4>
-                <h4>Special Skills: { elem.skills + ' , '}</h4>
-                <h4>Rate:{elem.rate}</h4>
+                    <h2>Name: {elem.name}</h2>
+                    <h3>Company: {elem.company}</h3>
+                    <h4>Experience: {elem.experience}</h4>
+                    <h4>Special Skills: {elem.skills + ' , '}</h4>
+                    <h4>Rate:{elem.rate}</h4>
                 </div>
                 <div className="navbutton">
-                <button className='delete' onClick={() => this.deleteUser(elem.id)}>Delete</button>
-                <Popup trigger={<button className='edits'>Edit</button>} position="right center">
-                    <div><Update contact={elem} index={index} update={this.updateContact} /></div>
-                </Popup>
-                <Popup trigger={<button className='contact info'>Contact</button>} position="right center">
-                    <div><h3>Email:</h3>{elem.email}
-                        <h3>Phone:</h3>{elem.phone}
-                        <h3>City:</h3>{elem.city}
-                    </div>
-                </Popup>
+                    <button className='delete' onClick={() => this.deleteUser(elem.id)}>Delete</button>
+                    <Popup trigger={<button className='edits'>Edit</button>} position="right center">
+                        <div><Update contact={elem} index={index} update={this.updateContact} /></div>
+                    </Popup>
+                    <Popup trigger={<button className='contactInfo'>Contact</button>} position="right center">
+                        <div><h3>Email:</h3>{elem.email}
+                            <h3>Phone:</h3>{elem.phone}
+                            <h3>City:</h3>{elem.city}
+                        </div>
+                    </Popup>
                 </div>
             </div>
         })
 
         return (
             <div>
+                <header className='header'>
+                    <div className='Username'>Jeoffrey Howe</div>
+                    <div className='App'>Production Contacts</div>
+                 
+                </header>
+                <div className="diplayContacts">
                 {displayArray}
-                <Popup trigger={<button className="newContact">New Contact</button>} position='right center'>
-                <div>
-                <h3>New Contact</h3>
-                <Create addNew={this.addNew}/>
                 </div>
+                <div className="right">Find a Pro</div>
+                <Popup trigger={<button className="newContact">New Contact</button>} position='right center'>
+                    <div className='addNew'>
+                        <h3>New Contact</h3>
+                        <Create addNew={this.addNew} />
+                    </div>
                 </Popup>
             </div>
         )

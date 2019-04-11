@@ -1,33 +1,78 @@
-.App {
-  text-align: center;
+.header {
+  background-color: black;
+  z-index: 2;
+  font-size: 40px;
+  color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin-top:100px;
+  background-color: grey;
+  font-family: 'Oswald', sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Contact {
+  top: 120px;
+  float: left;
+  margin-top: 1%;
+  margin-left: 1%;
+  background-color: white;
+  width: 50%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
-
-.App-link {
-  color: #61dafb;
+.navbutton {
+  margin-left: 82%;
+  margin-bottom: 1%;
+  display: flex;
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-right: 14px;
+  width: 80%;
+  max-width: 200px;
+  background: #fff; background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  color:black;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+.edits {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 8px;
+  width: 80%;
+  max-width: 200px;
+  background: #fff;  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  color:black;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+ 
+}
+.right {
+  position: fixed;
+  height:100%;
+  width: 20%;
+  display: flex;
+  font-size: 90px;
+  text-align: center;
+  color: White;
+  right: 0;
+  background-color: black;
 }
