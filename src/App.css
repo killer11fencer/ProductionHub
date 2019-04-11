@@ -17,9 +17,9 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 .Contact {
-  top: 120px;
+  
   float: left;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-left: 1%;
   background-color: white;
   width: 50%;
@@ -29,17 +29,30 @@ body {
   align-items: center;
   
 }
+
+i {
+  position: absolute;
+  left: 85px;
+  margin-top: 60px;
+  
+}
+.Profile {
+  margin-left: 450px;
+}
 .navbutton {
   margin-left: 82%;
-  margin-bottom: 1%;
+  
   display: flex;
   
 }
-.delete {
+.contactInfo {
+  font-size: 50px;
   display: block;
   box-sizing: border-box;
   margin: 0 auto;
-  margin-right: 14px;
+  position: relative;
+  top:-150px;
+  right:100px;
   width: 80%;
   max-width: 200px;
   background: #fff; background: rgba(255, 255, 255, 0.5);
@@ -50,21 +63,11 @@ body {
   letter-spacing: 1px;
   transition: all 0.3s ease-out;
 }
-.edits {
-  display: block;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 8px;
-  width: 80%;
-  max-width: 200px;
-  background: #fff;  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  color:black;
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: 1px;
- 
+.button{
+  margin-left: 20px;
 }
+  
+
 .right {
   position: fixed;
   height:100%;
