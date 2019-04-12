@@ -43,7 +43,7 @@ render() {
                 <h5>Email:<input name='email' placeholder='Email' onChange={this.handleChange}></input></h5>
                 <h5>City:<input name='city'placeholder='City' onChange={this.handleChange}></input></h5>
             </div>
-            <button onClick={this.handleClick}>Submit</button>
+            <button className='button2'onClick={this.handleClick}>Submit</button>
 
         </div>
     )

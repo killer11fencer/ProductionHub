@@ -78,7 +78,7 @@ class Contract extends Component {
                 </div>
                 <div className="Adding">
                 <i class="fas fa-users fa-lg"></i>
-                <Popup trigger={<button className="newContact">New Contact</button>} position="bottom left">
+                <Popup trigger={<button className='button2'>New Contact</button>} position="bottom left">
                     <div className='addNew'>
                         <h3>New Contact</h3>
                         <Create addNew={this.addNew} />

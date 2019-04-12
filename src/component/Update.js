@@ -44,7 +44,7 @@ class Update extends Component {
                         <h5>Email:<input value={this.state.email} name='email' placeholder='Email' onChange={this.handleChange}></input></h5>
                         <h5>City:<input value={this.state.city} name='city'placeholder='City' onChange={this.handleChange}></input></h5>
                     </div>
-                    <button onClick={this.handleClick}>Submit</button>
+                    <button className='button2'onClick={this.handleClick}>Submit</button>
         
                 </div>
             ) 
