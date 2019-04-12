@@ -13,6 +13,7 @@ class Update extends Component {
             phone: props.contact.phone,
             email: props.contact.email,
             city: props.contact.city,
+            video: props.contact.video,
             id: props.contact.id
         }
     }
@@ -38,6 +39,7 @@ class Update extends Component {
                     <h5>Experience:<input value={this.state.experience} name='experience'placeholder='Experience'onChange={this.handleChange}></input></h5>
                     <h5>Skills:<input value={this.state.skills} name='skills' placeholder='Skills'onChange={this.handleArray}></input></h5>
                     <h5>Rate:<input value={this.state.rate} name='rate' placeholder='Rate'onChange={this.handleChange}></input></h5>
+                    <h5>Demo Reel:<input value={this.state.video} name='video' placeholder='Video URL'onChange={this.handleChange}></input></h5>
                     <div>
                         <h4>Contact</h4>
                         <h5>Phone:<input value={this.state.phone} name='phone' placeholder='Phone Number' onChange={this.handleChange}></input></h5>

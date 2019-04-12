@@ -42,7 +42,10 @@ class Contract extends Component {
 
         let displayArray = this.state.contractArray.map((elem, index) => {
             return <div className='Contact' key={index}>
-                <VideoPlayer className='Video' video='https://www.youtube.com/watch?v=UWUYvyatLp0'/>
+                <div className="videoplayer">
+                <h2>Demo Reel</h2>
+                <VideoPlayer video={elem.video}/>
+                </div>
                 <div className="info">
                 
                     <h2>Name: {elem.name}</h2>

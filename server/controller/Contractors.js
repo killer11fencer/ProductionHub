@@ -9,6 +9,7 @@ let contractors = [ {
     rate: '$500 a day',
     phone: '805-345-4123',
     email: 'canasian@gmail.com',
+    video: 'https://vimeo.com/281718664',
     city: 'Draper'
 },
 {
@@ -20,6 +21,7 @@ let contractors = [ {
     skills: ['DP', 'Animator', 'Director'],
     rate: '$500 a day',
     phone: '804-345-4123',
+    video:'https://youtu.be/Eb7KR6_-Eog',
     email: 'gggggcanasian@gmail.com',
     city: 'Springville'
 },
@@ -32,6 +34,7 @@ let contractors = [ {
     skills: ['Writer','actor'],
     rate: '$500 a day',
     phone: '806-345-4123',
+    video: 'https://youtu.be/EDrntP3j6Vo',
     email: 'Jenn@gmail.com',
     city: 'Calgary'
 }
