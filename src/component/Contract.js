@@ -41,7 +41,7 @@ class Contract extends Component {
         let displayArray = this.state.contractArray.map((elem, index) => {
             return <div className='Contact' key={index}>
                 <div className="info">
-                <i class="fas fa-users fa-10x"></i>
+                
                     <h2>Name: {elem.name}</h2>
                     <h3>Company: {elem.company}</h3>
                     <h4>Experience: {elem.experience}</h4>
@@ -55,7 +55,7 @@ class Contract extends Component {
                     </Popup>
                     <Popup trigger={<button className='contactInfo'>Contact</button>} position="right center">
                         <div><h3>Email:</h3><a href={`mailto:${elem.email}?Subject=Video Production Job`} target="_top">{elem.email}</a>
-                            <h3>Phone:</h3>{elem.phone}
+                            <h3>Phone:</h3><a class='phone' href={`tel://${elem.phone}`}>{elem.phone}</a>
                             <h3>City:</h3>{elem.city}
                         </div>
                     </Popup>
@@ -66,22 +66,25 @@ class Contract extends Component {
         return (
             <div>
                 <header className='header'>
-                    <div className='Username'>Jeoffrey Howe</div>
-                    <div className='App'>Production Contacts</div>
-                 
+                    <div className='Username'>Production Hub</div>
+                    
+               
                 </header>
                 <div className="diplayContacts">
                 {displayArray}
                 </div>
-                <div className="right">Find A Pro
+                <div className="right">Find <br/>A <br/>Pro
                 
                 </div>
-                <Popup trigger={<button className="newContact">New Contact</button>} position='left center'>
+                <div className="Adding">
+                <i class="fas fa-users fa-lg"></i>
+                <Popup trigger={<button className="newContact">New Contact</button>} position="bottom left">
                     <div className='addNew'>
                         <h3>New Contact</h3>
                         <Create addNew={this.addNew} />
                     </div>
                 </Popup>
+                </div>
             </div>
         )
 
