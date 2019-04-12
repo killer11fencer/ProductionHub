@@ -3,6 +3,8 @@ import Create from './Create'
 import Update from './Update'
 import Popup from 'reactjs-popup'
 import Axios from 'axios';
+import VideoPlayer from './ReactPlayer'
+
 
 class Contract extends Component {
     constructor() {
@@ -40,6 +42,7 @@ class Contract extends Component {
 
         let displayArray = this.state.contractArray.map((elem, index) => {
             return <div className='Contact' key={index}>
+                <VideoPlayer className='Video' video='https://www.youtube.com/watch?v=UWUYvyatLp0'/>
                 <div className="info">
                 
                     <h2>Name: {elem.name}</h2>
