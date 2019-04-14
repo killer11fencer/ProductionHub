@@ -4,7 +4,7 @@ import Update from './Update'
 import Popup from 'reactjs-popup'
 import Axios from 'axios';
 import VideoPlayer from './ReactPlayer'
-
+import Settings from './Settings'
 
 class Contract extends Component {
     constructor() {
@@ -36,6 +36,22 @@ class Contract extends Component {
         }).catch((err) => { console.log('err', err) })
 
     }
+    updateColor = (event) => 
+    { if(!event) { 
+      let elem = document.getElementsByClassName('header')
+      let side = document.getElementsByClassName('right')
+        for(let i = 0; i < elem.length; i++) {
+            elem[i].style['background-color'] = 'blue'
+            side[i].style['background-color'] = 'blue'}
+        } else {
+            let elem = document.getElementsByClassName('header')
+            let side = document.getElementsByClassName('right')
+            for(let i = 0; i < elem.length; i++) {
+            elem[i].style['background-color'] = 'black'
+            side[i].style['background-color'] = 'black'
+        }
+    }
+}
 
     render() {
         console.log(this.state)
@@ -66,6 +82,9 @@ class Contract extends Component {
                         </div>
                     </Popup>
                 </div>
+                <Popup trigger={<i className="fas fa-cog"></i>} position="right center">
+                        <Settings updateColor={this.updateColor}/>
+                    </Popup>
             </div>
         })
 
@@ -83,7 +102,7 @@ class Contract extends Component {
                 
                 </div>
                 <div className="Adding">
-                <i class="fas fa-users fa-lg"></i>
+                <i className="fas fa-users fa-lg"></i>
                 <Popup trigger={<button className='button2'>New Contact</button>} position="bottom left">
                     <div className='addNew'>
                         <h3>New Contact</h3>
