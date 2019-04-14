@@ -51,7 +51,7 @@ class Contract extends Component {
                     <h2>Name: {elem.name}</h2>
                     <h3>Company: {elem.company}</h3>
                     <h4>Experience: {elem.experience}</h4>
-                    <h4>Special Skills: {elem.skills + ' , '}</h4>
+                    <h4>Special Skills: {elem.skills + ',' }</h4>
                     <h4>Rate: {elem.rate}</h4>
                 </div>
                 <div className="navbutton">

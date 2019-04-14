@@ -22,7 +22,6 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 .Contact {
-  
   float: left;
   margin-top: 2%;
   margin-left: 1%;
@@ -118,7 +117,7 @@ i {
 }
 .videoplayer {
   position: relative;
-  left: -250px;
+  left: -350px;
   top: 150px;
   margin-right: 50px;
 }
